@@ -1,30 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
-    <title>Base de données</title>
-    <style>
-        table { border-collapse: collapse; width: 100%; margin: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-        th { background-color: #f32929; color: white; }
-        tr:nth-child(even) { background-color: #f2f2f2; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <title>isaac db</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
     <h1>Liste des items</h1>
+
+    <div>
+        <form>
+            <input type="text" name="text" class="search" placeholder="Recherchez ici!">
+            <input type="submit" name="submit" class="submit" value="Search">
+        </form>
+    </div>
+
+    <section class="sec_pool">
+        <div class="bloc_pool">
+            <div class="pro_pool">
+                <p>angel room</p>
+            </div>
+            <div class="pro_pool">
+                <p>devil room</p>
+            </div>
+            <div class="pro_pool">
+                <p>item room</p>
+            </div>
+            <div class="pro_pool">
+                <p>secret room</p>
+            </div>
+            <div class="pro_pool">
+                <p>challenge room</p>
+            </div>
+            <div class="pro_pool">
+                <p>shop</p>
+            </div>
+            <div class="pro_pool">
+                <p>library</p>
+            </div>
+        </div>
+    </section>
+
     <table>
-        <tr>
-            <th>ID</th>
-            <th>Nom</th>
-            <th>Pickup</th>
-            <th>Quality</th>
-            <th>Effect</th>
-            <th>Type</th>
-            <th>Item Pool</th>
+        <th>item id</th>
+        <th>Nom</th>
+        <th>image</th>
+        <th>quote</th>
+        <th>quality</th>
+        <th>charges</th>
+        <th>Item Pool</th>
         {% for item in items %}
         <tr>
             <td>{{ item[1] }}</td>
             <td>{{ item[0] }}</td>
-            <td>{{ item[2] }}</td>
+            <td class="td_ico"><img class="ico" src="{{ item[2] }}" alt="{{ item[0] }}" referrerpolicy="no-referrer">
+            </td>
             <td>{{ item[3] }}</td>
             <td>{{ item[4] }}</td>
             <td>{{ item[5] }}</td>
@@ -33,4 +66,5 @@
         {% endfor %}
     </table>
 </body>
+
 </html>

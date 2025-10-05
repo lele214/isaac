@@ -7,11 +7,11 @@ app = Flask(__name__)
 def index():
 
     # connect to database
-    conn = sqlite3.connect(r'data\items.db')
+    conn = sqlite3.connect(r'data\tboi_items.db')
     cursor = conn.cursor()
     
     # list by item_id
-    cursor.execute("SELECT name, item_id, pickup, quality, effect, type, item_pool FROM items ORDER BY item_id")
+    cursor.execute("SELECT name, item_id, image_url, quote, quality, recharge, item_pool FROM items ORDER BY item_id")
     items = cursor.fetchall()
     
     conn.close()
@@ -20,3 +20,5 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
