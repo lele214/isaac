@@ -1,4 +1,4 @@
-py -3 -m venv .venv
+python -m venv .venv
 
 .venv\Scripts\activate
 
