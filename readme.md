@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Structure du projet
+=======
+#Structure du projet
+>>>>>>> bd7bb2ccde747d19f2c899d9702081f194fd4c4d
 
 isaac/
 │
@@ -27,4 +31,5 @@ git clone https://github.com/lele214/isaac.git
 cd isaac
 
 # Installer et configurer l'environnement
+
 .\install.ps1
