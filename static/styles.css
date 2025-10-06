@@ -1,6 +1,14 @@
+body {
+    background-image: url('https://w0.peakpx.com/wallpaper/332/735/HD-wallpaper-the-binding-of-isaac-games-tboi.jpg');
+}
+
+.container_table {
+    display: flex;
+    justify-content: center;
+}
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 95%;
     margin: 20px;
 }
 
@@ -17,41 +25,60 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #ffcdcd;
 }
 
-.sec_pool {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+tr:nth-child(odd) {
+    background-color: #ffe8e8;
 }
+
+tr:hover {background: linear-gradient(to right, coral, pink);}
+
+.container_pool {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 35px
+}
+
 .bloc_pool {
-    width: 50%;
-    background-color: beige;
-    height: 250px;
+    width: 45%;
+    /*background-color: #f8f8f8; */
+    padding: 20px;
+    border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
     justify-content: center;
-    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .pro_pool {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 11px 5px;
-    margin-right: 10px;
-    font-size: 17px;
+    padding: 12px 20px;
+    font-size: 16px;
     font-weight: 600;
-    background: linear-gradient(135deg, #12397c, #1d4ed8);
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
-    min-width: 140px;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+    min-width: 150px;
+    min-height: 35px;
+}
+
+
+.pro_pool:active {
+    transform: translateY(-1px);
+}
+
+.text_pool {
+    color: white;
 }
 
 .td_ico {
@@ -59,4 +86,59 @@ tr:nth-child(even) {
 }
 .ico {
     width: 45px;
+}
+
+.activ-- {
+    width: 45%;
+    margin-top: 30px;
+    /*background-color: #f8f8f8; */
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.activ_bloc {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff0015, #ff3e4e);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+.icon-group {
+    display: flex;
+}
+
+.icon-1, .icon-2 {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icon-1 {
+    background-image: url('image/questionmark.png');
+    width: 32px;
+    height: 32px;
+}
+
+.icon-2 {
+    background-image: url('image/Recharge_time.png');
+    width: 6px;
+    height: 32px;
+}
+
+.activable_ico {
+    padding-left: 10px;
 }
