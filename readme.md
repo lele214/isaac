@@ -1,4 +1,5 @@
 # Structure du projet
+```bash
 isaac/
 │
 ├── data/
@@ -20,11 +21,15 @@ isaac/
 │
 ├── requirements.txt                    # Dépendances Python
 └── README.md                           # Documentation du projet
+```
 
 # Cloner le repository
+```bash
 git clone https://github.com/lele214/isaac
 cd isaac
+```
 
 # Installer et configurer l'environnement
-
+```bash
 .\install.ps1
+```
