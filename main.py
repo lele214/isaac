@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import sqlite3
 
 app = Flask(__name__)
-app.config['TEMPLATES_AUTO_RELOAD'] = True  #temporaire
+#app.config['TEMPLATES_AUTO_RELOAD'] = True  #temporaire
 @app.route('/')
 def index():
     # Récupérer les filtres depuis l'URL
@@ -49,4 +49,4 @@ def index():
                           current_pool=pool_filter)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
