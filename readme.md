@@ -22,7 +22,7 @@ isaac/
 └── README.md                           # Documentation du projet
 
 # Cloner le repository
-git clone https://github.com/lele214/isaac.git
+git clone https://github.com/lele214/isaac
 cd isaac
 
 # Installer et configurer l'environnement
